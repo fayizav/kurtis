@@ -6,9 +6,9 @@ const { ObjectID } = require("bson")
 
 const { log } = require('debug/src/node')
 
-const Razorpay=require("razorpay")
+const razorpay=require("razorpay")
 
-var instance = new Razorpay({
+var instance = new razorpay({
   key_id: "rzp_test_wxBeuGUWgAI19I",
   key_secret: "v1oxHOmPj8fChpMmKzfxAkum",
 });
