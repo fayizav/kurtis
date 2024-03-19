@@ -5,16 +5,13 @@ const {ObjectId}  = require("mongodb")
 const { ObjectID } = require("bson")
 
 const { log } = require('debug/src/node')
+
 const Razorpay=require("Razorpay")
 
 var instance = new Razorpay({
-  key_id: "rzp_test_E6MNPnyr0tBqss",
-  key_secret: "wRMIwKaycq0tnWUxjqb0FIvP",
+  key_id: "rzp_test_wxBeuGUWgAI19I",
+  key_secret: "v1oxHOmPj8fChpMmKzfxAkum",
 });
-
-
-
-
 
 
 exports.generateRazorpay=(userId, totalPrice) => {
@@ -47,7 +44,7 @@ exports.generateRazorpay=(userId, totalPrice) => {
     return new Promise((resolve, reject) => {
       try {
         const crypto = require("crypto");
-        let hmac = crypto.createHmac("sha256",instance.key_id);
+        let hmac = crypto.createHmac("sha256","v1oxHOmPj8fChpMmKzfxAkum");
         hmac.update(
           details["payment[razorpay_order_id]"] +
             "|" +
