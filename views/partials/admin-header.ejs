@@ -1,0 +1,31 @@
+<header class="main-header navbar">
+  <div class="container-fluid">
+      <div class="row justify-content-between align-items-center">
+          <div class="col">
+              <form class="searchform">
+                  <div class="input-group">
+                      <input
+                          list="search_terms"
+                          type="text"
+                          class="form-control"
+                          placeholder="Search term"
+                      />
+                      <button class="btn btn-light bg" type="button">
+                          <i class="material-icons md-search"></i>
+                      </button>
+                  </div>
+                  <datalist id="search_terms">
+                      <option value="Products"></option>
+                      <option value="View Products"></option>
+                      <option value="Lion Casual"></option>
+                  </datalist>
+              </form>
+          </div>
+          <div class="col-auto padding-left-16">
+              <a class="text-danger" href="/admin/logout">
+                  <i class="material-icons md-perm_identity"></i>Logout
+              </a>
+          </div>
+      </div>
+  </div>
+</header>
